@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     handleSelect (key, keyPath) {
-      console.log(key, keyPath)
+      console.log(123, key, keyPath)
     },
     goToExample () {
       this.$router.push({name: 'example'})
