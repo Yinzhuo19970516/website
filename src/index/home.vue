@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <home-header class="header"></home-header>
-    <div class="content">我是首页</div>
+    <div class="content">我是首页
+      <dialog-bar></dialog-bar>
+    </div>
+    
     <home-footer></home-footer>
   </div>
 </template>
@@ -9,6 +12,7 @@
 <script>
 import HomeHeader from '../components/header'
 import HomeFooter from '../components/footer'
+import dialogBar from '../components/popper/index'
 export default {
   name: 'home',
   data () {
@@ -18,7 +22,8 @@ export default {
   },
   components: {
     HomeHeader,
-    HomeFooter
+    HomeFooter,
+    dialogBar
   }
 }
 </script>
