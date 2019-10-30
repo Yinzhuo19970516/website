@@ -32,35 +32,38 @@ export default {
 <style scoped>
   .wrapfooter {
     width: 100%;
-    height: 101px;
-    background-image: linear-gradient(135deg, #6B8FFE 0%, #574EF2 100%);
+    height: 110px;
+    background-image: linear-gradient(135deg, rgb(94, 96, 100) 0%, rgb(12, 12, 14) 100%);
   }
   .footer {
     width: 1000px;
-    height: 101px;
+    height: 110px;
     margin: 0 auto;
     color: #fff;
     position: relative;
   }
   .footer_left {
-    width: 500px;
-    height: 91px;
+    width: 80%;
+    height: 95%;
     float: left;
     line-height: 30px;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 13px;
     font-family: "微软雅黑";
     color: #fff;
+    text-align: center;
   }
   .footer_right {
-    width: 395px;
-    height: 101px;
+    width: 20%;
+    height: 95%;
     float: right;
-    padding: 0 0 0 105px;
+    padding-top: 5px;
+    /* padding: 0 0 0 105px; */
+    text-align: center;
   }
   .footer_right p {
-    height: 43px;
-    line-height: 43px;
+    height: 5%;
+    /* line-height: 43px; */
     font-size: 13px;
     font-family: "微软雅黑";
     color: #fff;
