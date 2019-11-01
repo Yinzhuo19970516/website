@@ -9,3 +9,10 @@ export default {
   name: 'App'
 }
 </script>
+<style>
+  #app{
+    min-height: 100%;
+    position: relative;
+    box-sizing: border-box;
+  }
+</style>
