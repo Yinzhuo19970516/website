@@ -1,6 +1,7 @@
 <template>
   <div class="warp">
     <div>实验室概况</div>
+      <router-view/>
   </div>
 </template>
 

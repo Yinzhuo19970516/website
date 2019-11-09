@@ -7,6 +7,9 @@ import tutor_team from '../pages/pages3/index.vue'
 import training from '../pages/pages4/index.vue'
 import stu_place from '../pages/pages5/index.vue'
 import download from '../pages/pages6/index.vue'
+
+import introduce from '../pages/pages1/page_item/Introduce'
+import announcement from '../pages/pages1/page_item/Announcement'
 Vue.use(Router)
 
 export default new Router({
@@ -24,10 +27,12 @@ export default new Router({
             {
               path: 'intruduce',
               name: 'intruduce',
+              component: introduce,
             },
             {
               path: 'announcement',
               name: 'announcement',
+              component: announcement,
             },
             {
               path: 'news',

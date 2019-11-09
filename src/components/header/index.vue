@@ -4,10 +4,10 @@
       <el-menu-item class="name">数字媒体研究所</el-menu-item>
       <el-submenu index="1">
         <template slot="title">实验室概况</template>
-        <el-menu-item index="1-1" @click="goToExample">实验室介绍</el-menu-item>
+        <el-menu-item index="1-1" @click="goTolab_overview">实验室介绍</el-menu-item>
         <el-menu-item index="1-2">研究方向</el-menu-item>
       </el-submenu >
-      <el-menu-item index="2">科学研究</el-menu-item>
+      <el-menu-item index="2" @click="goToReseach">科学研究</el-menu-item>
       <el-submenu index="3">
         <template slot="title">学术论文</template>
         <el-menu-item index="3-1">期刊论文</el-menu-item>
@@ -39,8 +39,11 @@ export default {
     handleSelect (key, keyPath) {
       console.log(key, keyPath)
     },
-    goToExample () {
-      this.$router.push({name: 'example'})
+    goTolab_overview () {
+      this.$router.push({name: 'lab_overview'})
+    },
+    goToReseach() {
+      this.$router.push({name: 'reseach'})
     }
   }
 }
