@@ -1,19 +1,21 @@
 <template>
   <div class="container">
-    
-    <home-header class="header"></home-header>
-    <div class="content">我是首页
+    <header-info class="header-info"></header-info>
+    <home-header class="header" :active-index="3"></home-header>
+
+    <div class="content">
       <dialog-bar></dialog-bar>
       <router-view/>
 
     </div>
-    
+
     <home-button></home-button>
   </div>
 </template>
 
 <script>
 import HomeHeader from '../components/header'
+import HeaderInfo from '../components/headerInfo'
 import HomeButton from '../components/under/index'
 import dialogBar from '../components/popper/index'
 export default {
@@ -26,7 +28,8 @@ export default {
   components: {
     HomeHeader,
     HomeButton,
-    dialogBar
+    dialogBar,
+    HeaderInfo
   }
 }
 </script>
@@ -34,10 +37,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
   .container{
-    max-width:100%;
+    width:1000px;
     height:100%;
-    padding-left:120px;
-    padding-right:120px;
+    margin:auto;
+    .header-info{
+      margin:0 auto;
+    }
     .content{
       height:600px;
     }

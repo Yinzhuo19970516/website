@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from '../pages/index.vue'
-import lab_overview from '../pages/pages1/index.vue'
-import reseach from '../pages/pages2/index.vue'
-import tutor_team from '../pages/pages3/index.vue'
+import labOverview from '../pages/pages1/index.vue'
+import research from '../pages/pages2/index.vue'
+import tutorTeam from '../pages/pages3/index.vue'
 import training from '../pages/pages4/index.vue'
-import stu_place from '../pages/pages5/index.vue'
+import stuPlace from '../pages/pages5/index.vue'
 import download from '../pages/pages6/index.vue'
 
 import introduce from '../pages/pages1/page_item/Introduce'
@@ -15,18 +15,18 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/index',
+      path: '/',
       name: 'index',
       component: home,
       children: [
         {
-          path: 'lab_overview',
-          name: 'lab_overview',
-          component: lab_overview,
+          path: 'labOverview',
+          name: 'labOverview',
+          component: labOverview,
           children: [
             {
-              path: 'intruduce',
-              name: 'intruduce',
+              path: 'introduce',
+              name: 'introduce',
               component: introduce,
             },
             {
@@ -57,9 +57,9 @@ export default new Router({
           ]
         },
         {
-          path: 'reseach',
-          name: 'reseach',
-          component: reseach,
+          path: 'research',
+          name: 'research',
+          component: research,
           children: [
             {
               path: 'team',
@@ -80,9 +80,9 @@ export default new Router({
           ]
         },
         {
-          path: 'tutor_team',
-          name: 'tutor_team',
-          component: tutor_team,
+          path: 'tutorTeam',
+          name: 'tutorTeam',
+          component: tutorTeam,
           children: [
             {
               path: 'leader',
@@ -110,9 +110,9 @@ export default new Router({
           ]
         },
         {
-          path: 'stu_place',
-          name: 'stu_place',
-          component: stu_place,
+          path: 'stuPlace',
+          name: 'stuPlace',
+          component: stuPlace,
           children: [
             {
               path: 'innovation',
