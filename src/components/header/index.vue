@@ -21,16 +21,41 @@
     data () {
       return {
         navs: [
-          {name: '实验室概况', haveList: false, list: [{listName: '实验室介绍',haveListName:false}, {listName: '研究方向',haveListName:false}]},
-          {name: '科学研究', haveList: false},
-          {
-            name: '学术论文',
-            haveList: false,
-            list: [{listName: '期刊论文',haveListName:false}, {listName: '会议论文',haveListName:false}, {listName: '荣誉奖励',haveListName:false}, {listName: '专利',haveListName:false}]
-          },
-          {name: '人员', haveList: false, list: [{listName: '教师',haveListName:false}, {listName: '学生',haveListName:false}, {listName: '毕业生',haveListName:false}]},
-          {name: '教学工作', haveList: false},
-          {name: '新闻', haveList: false}
+          {name: '实验室概况', haveList: false,
+            list: [
+              {listName: '实验室介绍',haveListName:false}, 
+              {listName: '实验室公告',haveListName:false},
+              {listName: '实验室新闻',haveListName:false},
+              {listName: '媒体报道',haveListName:false},
+              {listName: '荣誉资质',haveListName:false},
+              {listName: '合作伙伴',haveListName:false},
+              {listName: '联系我们',haveListName:false},
+            ]},
+          {name: '研究开发', haveList: false,
+            list: [
+              {listName: '科研团队',haveListName:false},
+              {listName: '科研项目',haveListName:false},
+              {listName: '论文专著',haveListName:false},
+              {listName: '学术交流',haveListName:false},
+            ]},
+          {name: '师资队伍',haveList: false,
+            list: [
+              {listName: '学术带头人',haveListName:false}, 
+              {listName: '教师团队',haveListName:false},
+            ]},
+          {name: '人才培养', haveList: false,
+            list: [
+              {listName: '学历培养',haveListName:false},
+              {listName: '学位培养',haveListName:false},
+            ]},
+          {name: '学生天地', haveList: false,
+            list: [
+              {listName: '学生创新',haveListName:false},
+              {listName: '学生作品',haveListName:false},
+              {listName: '学生活动',haveListName:false},
+              {listName: '学生简介',haveListName:false},
+            ]},
+          {name: '资源下载', haveList: false}
         ]
       }
     },
