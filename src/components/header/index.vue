@@ -6,9 +6,11 @@
         <ul class="navs">
           <li v-for="(item,index) in navs" class="nav" @mouseenter="mouseenter1(index)" @mouseleave="mouseleave1(index)">
             <div class="nav-item" :class="{'nav-item-active':activeIndex == index}" @click="tabIndex(index)">{{item.name}}</div>
+            <transition name="slide-fade" mode="out-in" appear>
             <ul v-if="item.haveList&&item.list" class="dropdownWrapper" >
               <li class="listName" :class="{'listName-active':obj.haveListName}" v-for='(obj,key) in item.list' @mouseenter="mouseenter2(index,key)" @mouseleave="mouseleave2(index,key)">{{obj.listName}}</li>
             </ul>
+              </transition>
           </li>
         </ul>
       </div>
@@ -16,6 +18,7 @@
     <div class="hr"></div>
   </div>
 </template>
+
 <script>
   export default {
     data () {
@@ -23,7 +26,7 @@
         navs: [
           {name: '实验室概况', haveList: false,
             list: [
-              {listName: '实验室介绍',haveListName:false}, 
+              {listName: '实验室介绍',haveListName:false},
               {listName: '实验室公告',haveListName:false},
               {listName: '实验室新闻',haveListName:false},
               {listName: '媒体报道',haveListName:false},
@@ -40,7 +43,7 @@
             ]},
           {name: '师资队伍',haveList: false,
             list: [
-              {listName: '学术带头人',haveListName:false}, 
+              {listName: '学术带头人',haveListName:false},
               {listName: '教师团队',haveListName:false},
             ]},
           {name: '人才培养', haveList: false,
@@ -82,11 +85,22 @@
   }
 </script>
 
+
 <style lang="less" scoped>
   .hr{
     height:1px;
     width: 100%;
     background-color: #E7EBEE;
+  }
+  .slide-fade-enter-active {
+    transition: all .3s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .8s ease-out;
+  }
+  .slide-fade-enter, .slide-fade-leave-to {
+    transform: translateX(10px);
+    opacity: 0;
   }
   .container {
     width: 100%;
